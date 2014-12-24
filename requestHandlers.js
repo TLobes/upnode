@@ -1,20 +1,17 @@
-var exec = require("child_process").exec;
+var generateBody = require("./generateBody"); // Do I need this?
 
 function start(response) {
   	console.log("Request handler 'start' was called.");
 
-  	exec("ls -lah", function (error, stdout, stderr) {
-    	response.writeHead(200, {"Content-Type": "text/plain"});
-    	response.write(stdout);
-    	response.end();
-  	});
+ 	// Hoping this call will replace the code in generateBody.js
+ 	generateBody(response); 
 }
 
 function upload(response) {
-	  console.log("Request handler 'upload' was called.");
-	  response.writeHead(200, {"Content-Type": "text/plain"});
-	  response.write("Yo Upload");
-	  response.end();
+  console.log("Request handler 'upload' was called.");
+  response.writeHead(200, {"Content-Type": "text/plain"});
+  response.write("Hello Upload");
+  response.end();
 }
 
 exports.start = start;
