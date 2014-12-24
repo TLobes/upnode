@@ -1,17 +1,16 @@
-var generateBody = require("./generateBody"); // Do I need this?
+var generateBody = require("./generateBody");
 
 function start(response) {
-  	console.log("Request handler 'start' was called.");
+	  	console.log("Request handler 'start' was called.");
 
- 	// Hoping this call will replace the code in generateBody.js
- 	generateBody(response); 
+	 	generateBody(response); 
 }
 
 function upload(response) {
-  console.log("Request handler 'upload' was called.");
-  response.writeHead(200, {"Content-Type": "text/plain"});
-  response.write("Hello Upload");
-  response.end();
+	  console.log("Request handler 'upload' was called.");
+	  response.writeHead(200, {"Content-Type": "text/plain"});
+	  response.write("Hello Upload");
+	  response.end();
 }
 
 exports.start = start;

@@ -18,4 +18,4 @@ function generateBody(response) {
     response.end();
 }
 
-exports.generateBody = generateBody;
+module.exports = generateBody;
