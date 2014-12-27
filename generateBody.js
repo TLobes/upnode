@@ -9,7 +9,7 @@ function generateBody(response) {
         '<form action="/upload" enctype="multipart/form-data" '+
         'method="post">'+
         '<input type="file" name="upload">'+
-        '<input type="submit" value="Upload file" />'+
+        '<input type="submit" value="Upload Image" />'+
         '</form>'+
         '</body>'+
         '</html>';
