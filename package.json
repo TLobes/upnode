@@ -9,7 +9,7 @@
     "url": "https://github.com/TLobes/upnode"
   },
   "engines": {
-    "node": "^0.11.14",
+    "node": "^0.11.35",
     "npm": "^2.0.x"
   },
   "private": true,
